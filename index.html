@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array of Objects</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Array Of Object's</h1>
+    </div>
+    <div class="mainquestion">
+        <span class="question">Question---</span>
+        <p>
+            <pre class="mainQ">
+"let studentRecords = [{name:'John', id:123, marks:98},
+          {name: 'Baba', id: 101, marks : 23 },
+          {name: 'yaga', id: 200, marks : 45 },
+          {name: 'Wick', id: 115, marks : 75 } ] "
+            </pre>
+        </p>
+    </div><br>
+
+
+
+    <div class="container">
+        <h2>Q.1- "We are interested in retrieving only the students' names; all the names should be in caps.
+            ['JOHN', 'BABA', 'YAGA', 'WICK']"</h2><br>
+
+        <span class="ans">Ans--</span>
+        <h3>
+            <pre>
+let studentRecords = [ {name: 'John', id: 123, marks : 98 },
+    {name: 'Baba', id: 101, marks : 23 },
+    {name: 'yaga', id: 200, marks : 45 },
+    {name: 'Wick', id: 115, marks : 75 } ]       
+let ans=studentRecords.map((item) => item.name.toUpperCase())
+        alert(ans)
+            </pre>
+         </h3>
+         <div class="check">
+            <button onclick="question1()">click here to check answer</button>
+         </div>   
+    </div><hr><br>
+
+
+    <div class="container">
+        <h2>Q.2- "Suppose we have the same dataset as above but this time we want to get the details of students who scored more than 50 marks.
+            [{name: 'John', id: 123, marks: 98 },{name: 'Wick', id: 115, marks: 75 }]"</h2><br>
+
+        <span class="ans">Ans--</span>
+        <h3>
+            <pre>
+let studentRecords = [ {name: 'John', id: 123, marks : 98 },
+    {name: 'Baba', id: 101, marks : 23 },
+    {name: 'yaga', id: 200, marks : 45 },
+    {name: 'Wick', id: 115, marks : 75 } ] 
+                
+let ans2=studentRecords.filter((item) => item.marks>50)
+    console.log(ans2)
+            </pre>
+         </h3>
+         <div class="check">
+            <button onclick="question2()">click here & check console</button>
+         </div>   
+    </div><hr><br>
+
+
+    <div class="container">
+        <h2>Q.3- Retrieve the details of students who scored more than 50 marks and have IDs greater than 120...?</h2><br>
+
+        <span class="ans">Ans--</span>
+        <h3>
+            <pre>
+let studentRecords = [ {name: 'John', id: 123, marks : 98 },
+    {name: 'Baba', id: 101, marks : 23 },
+    {name: 'yaga', id: 200, marks : 45 },
+    {name: 'Wick', id: 115, marks : 75 } ] 
+                
+let ans3=studentRecords.filter((item) => item.marks>50 && item.id>120)
+    console.log(ans3)
+            </pre>
+         </h3>
+         <div class="check">
+            <button onclick="question3()">click here & check console</button>
+         </div>   
+    </div><hr><br>
+
+
+    <div class="container">
+        <h2>Q.4- Consider the same scenario we have discussed above, but this time we would like to know the sum total of the marks of the students....?</h2><br>
+
+        <span class="ans">Ans--</span>
+        <h3>
+            <pre>
+let studentRecords = [ {name: 'John', id: 123, marks : 98 },
+    {name: 'Baba', id: 101, marks : 23 },
+    {name: 'yaga', id: 200, marks : 45 },
+    {name: 'Wick', id: 115, marks : 75 } ] 
+                
+    let ans4 = 0
+studentRecords.map((item) => ans4+= item.marks)
+    alert(ans4)
+            </pre>
+         </h3>
+         <div class="check">
+            <button onclick="question4()">click here to check answer</button>
+         </div>   
+    </div><hr><br>
+
+
+
+    <div class="container">
+        <h2>Q.5- This time we want to get only the names of the students who scored more than 50 marks from the same dataset used above....?</h2><br>
+
+        <span class="ans">Ans--</span>
+        <h3>
+            <pre>
+let studentRecords = [ {name: 'John', id: 123, marks : 98 },
+    {name: 'Baba', id: 101, marks : 23 },
+    {name: 'yaga', id: 200, marks : 45 },
+    {name: 'Wick', id: 115, marks : 75 } ] 
+                
+let ans2=studentRecords.filter((item) => item.marks>50)
+let ans5= ans2.map(student => student.name);
+    alert(ans5);
+            </pre>
+         </h3>
+         <div class="check">
+            <button onclick="question5()">click here to check answer</button>
+         </div>   
+    </div><hr><br>
+
+
+
+    <div class="container">
+        <h2>Q.6- This time we are required to print the sum of marks of the students with id > 120.....?</h2><br>
+
+        <span class="ans">Ans--</span>
+        <h3>
+            <pre>
+let studentRecords = [ {name: 'John', id: 123, marks : 98 },
+    {name: 'Baba', id: 101, marks : 23 },
+    {name: 'yaga', id: 200, marks : 45 },
+    {name: 'Wick', id: 115, marks : 75 } ] 
+                
+    let ans6 = 0
+studentRecords.filter((item) =>item.id>120).
+            map((item)=>ans6 += item.marks)
+                
+    alert(ans6);
+            </pre>
+         </h3>
+         <div class="check">
+            <button onclick="question6()">click here to check answer</button>
+         </div>   
+    </div><hr><br>
+
+
+
+    <div class="container">
+        <h2>Q.7- This time we are required to print the total marks of the students with marks greater than 50 after a grace of 15 marks has been added to those students who scored less than 50......?</h2><br>
+
+        <span class="ans">Ans--</span>
+        <h3>
+            <pre>
+let studentRecords = [ {name: 'John', id: 123, marks : 98 },
+    {name: 'Baba', id: 101, marks : 23 },
+    {name: 'yaga', id: 200, marks : 45 },
+    {name: 'Wick', id: 115, marks : 75 } ] 
+                
+    let ans7 = 0
+let studentplusMarks = studentRecords.map((item)=>{
+        if(item.marks<50)
+                item.marks += 15
+                return item
+}).map((item)=>item.marks > 50? ans7 += item.marks:null)
+    alert(ans7)
+            </pre>
+         </h3>
+         <div class="check">
+            <button onclick="question7()">click here to check answer</button>
+         </div>   
+    </div><hr><br>
+
+
+    <div class="container">
+        <h2>Q.8- Create 6 objects , each object will have name, class, roll no as properties. Store these objects in an array of objects. ......?</h2><br>
+
+        <span class="ans">Ans--</span>
+        <h3>
+            <pre>
+                const student1 = {
+                    name: "Ram",
+                    class: "12th",
+                    rollNo: 11,
+                  };
+                  
+                  const student2 = {
+                    name: "Shyam",
+                    class: "11th",
+                    rollNo: 10,
+                  };
+                  
+                  const student3 = {
+                    name: "Heera",
+                    class: "10th",
+                    rollNo: 9,
+                  };
+                  
+                  const student4 = {
+                    name: "Moti",
+                    class: "9th",
+                    rollNo: 8,
+                  };
+                  
+                  const student5 = {
+                    name: "Bahubali",
+                    class: "8th",
+                    rollNo: 7,
+                  };
+                  
+                  const student6 = {
+                    name: "Kattappa",
+                    class: "7th",
+                    rollNo: 6,
+                  };
+
+const students=[student1,student2,student3,student4,student5,student6];
+                  
+            console.log("Name:", students[0].name);
+            console.log("Class:", students[0].class);
+            console.log("Roll No:", students[0].rollNo);
+            </pre>
+         </h3>
+         <div class="check">
+            <button onclick="question8()">click here & check console</button>
+         </div>   
+    </div><hr><br>
+
+
+
+
+
+
+
+
+
+
+    <script src="./script.js"></script>
+</body>
+</html>
